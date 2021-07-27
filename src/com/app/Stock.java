@@ -1,5 +1,7 @@
 package com.app;
-
+/*
+ * Stocks Class, Contructor, Getters and Setters
+ */
 public class Stock {
 	String stockName;
 	int numberOfShares;

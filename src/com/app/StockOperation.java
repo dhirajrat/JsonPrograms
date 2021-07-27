@@ -1,7 +1,9 @@
 package com.app;
 
 import java.util.ArrayList;
-
+/*
+ * Stock Operation Methods to calculate Whole Share price
+ */
 public class StockOperation {
 	static ArrayList<StockReport> calculatedStocks = new ArrayList<>();
 	

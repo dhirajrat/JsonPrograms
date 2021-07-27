@@ -5,7 +5,9 @@ import java.util.ArrayList;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 
-
+/*
+ * Stock Management Runner(main method) Class
+ */
 public class StocksManagementRunner  {
 	public static void main  (String[] args) {
 		Stock icici = new Stock();
@@ -50,5 +52,20 @@ public class StocksManagementRunner  {
 		
 		try {JsonUtility.jsonStringToFile1(jsonStringReport);} catch (IOException e) {}
 		System.out.println("Report File Created");
+		
+		
+		StockAccountUserAndOperation user1 = new StockAccountUserAndOperation("Dhiraj's Report", stocksList);
+		user1.buyStock(user1);
+		user1.sellStock(user1);
+		System.out.println("Account Information of "+user1.getUserName()+ ">>>");
+		
+		String jsonStringUser1=null;
+		try {jsonStringUser1 = JsonUtility.convertJavaObjToJsonString2(user1);} catch (JsonProcessingException e) {}
+		System.out.println("********* Json String Of User Stocks ************");
+		System.out.println("\nAccount Information of "+user1.getUserName()+ ">>>");
+		System.out.println(jsonStringUser1);
+		try {JsonUtility.jsonStringToFile2(jsonStringUser1);} catch (IOException e) {}
+		System.out.println("Report Of user File Created");
+		
 	}
 }

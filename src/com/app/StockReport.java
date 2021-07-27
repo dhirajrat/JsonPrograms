@@ -1,8 +1,11 @@
 package com.app;
-
+/*
+ * Stock Report Class Contructor Getters And Setters
+ */
 public class StockReport {
 	String stockName;
 	int wholeSharePrice;
+	
 	public void setStockName(String stockName1) {
 		stockName = stockName1;
 	}
